@@ -6,37 +6,52 @@ h1{
   text-align: center;
 }
 
-  ul {
+ul {
     list-style: none;
     margin-left: auto;
-    padding: 0%;
-  }
+}
 
-button{
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
-  background-color: #17af95;
+  background-color: #75b7ea;
+  border: 2px solid white;
   border-radius: 15px;
   color: white;
-  height: 68px;
-  width: 202px;
+  height: 60px;
+  width: 180px;
 }
 
   /* Navigation styles */
 
 nav{
-  width: 90%;
+  font-size: 20px;
+  width: 100%;
   color: white;
-  background-color: #17af95;
+  background-color: #5AB3F4;
   display: flex;
   justify-content: flex-end;
   vertical-align: top;
 }
 
-.navList{
+.navList{  
   width: 40%;
   display:flex;
   justify-content: space-around;
+}
+
+.navList li{
+  padding-top: 25px;
+}
+
+.navList .btn{
+  height: 30%;
+  width: 25%;
+  padding: 10px;
+  margin-top: 15px;
 }
 
 .inline-block{
@@ -48,25 +63,28 @@ nav{
   position:absolute;
   top: 10;
   left: 100px;
-  height: 51px;
+  height: 85px;
   max-width: auto;
   padding: 0%;
-  z-index: 100;
+}
+
+.focus{
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 
 
-/* Hero Image */
-
 #heroSpace{
   margin-top: 30px;
-  width: 90%;
+  width: 100%;
   display:grid;
+  place-items: center;
   background-color: #5AB3F4;
   color: white;
   padding-bottom: 30px;
   grid-template-columns: 25% 25% 15% 20%;
-  grid-template-rows:  15% 20% 30% 35%;
+  grid-template-rows:  10% 15% 30% 40%;
   grid-template-areas: 
   "heroImg heroImg aboutMeH1 aboutMeH1"
   "heroImg heroImg aboutMeH2 aboutMeH2"
@@ -74,6 +92,8 @@ nav{
   "heroImg heroImg myskills myskills"
   ;
 }
+
+/* Hero Image */
 
 .heroImg{
   grid-area: heroImg;
@@ -88,28 +108,27 @@ nav{
   padding-top: 20px;
   text-align: center;
   grid-area:aboutMeH1;
-  margin: 0 auto;
 }
 
 
 #aboutMeH2{
   grid-area:aboutMeH2;
-  width: 800px;
+  width: 725px;
   margin: 0 auto;
 }
 
 #aboutMe{
-  font-size: 20px;
+  font-size: 24px;
   grid-area:aboutMe;
-  width: 800px;
+  width: 700px;
   margin: 0 auto;
 }
 
 
-#aboutMeButton{
+.aboutMeButton{
   position: relative;
-  left: 300px;
-  top: 100px;
+  left: 100px;
+  top: 70px;
   grid-area: aboutMeButton;
 }
 
@@ -123,7 +142,6 @@ nav{
 /* My Work */
 
   #myworkH1{
-    max-width: 90%;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -131,60 +149,94 @@ nav{
 
   #myWork{
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(23,175,149,1) 35%, rgba(90,179,244,1) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, #75b7ea 35%, rgba(90,179,244,1) 100%);
     color:white;
-    width: 90%;
+    width: 100%;
     margin-top: 70px;
+    padding-bottom: 70px;
     display:grid;
+    place-items: center;
     grid-template-columns: 50% 50% ;
-    grid-template-rows:  40% 40% ;
+    grid-template-rows:  50% 50% ;
     grid-template-areas: 
     "itinereasy canadaPost"
     "awayhome BabyThrift"
     ;
   }
 
+  .workTitle{
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  .workDesc{
+    max-width: 80%;
+  }
+
+  .workGrid a{ 
+    position:relative;
+    left: 200px
+  }
+
+/* Itinereasy Case study */
+
   #itinereasy{
     grid-area:itinereasy;
-    margin-left: 20px;
     max-width: 85%;
   }
+
+
+  /* Canada Post Case study  */
 
   #canadaPost{
     grid-area:canadaPost;
-    margin-left: 20px;
     max-width: 85%;
   }
+
+
+/* A Way Home Case Study */
 
   #awayhome{
     grid-area:awayhome;
-    margin-left: 20px;
-    margin-top: 100px;
-    max-width: 85%;
-  }
-
-  #BabyThrift{
-    grid-area:BabyThrift;
-    margin-left: 20px;
     padding-top: 100px;
     max-width: 85%;
   }
 
 
+
+/* BabyThrift Case Study */
+
+  #BabyThrift{
+    grid-area:BabyThrift;
+    padding-top: 100px;
+    max-width: 85%;
+    
+  }
+
+
 /* Footer */
+
 footer{
-  background-color: #17af95;
+  border:1px solid black;
+  background-color:#5ab3f4;
   color: white;
   text-align: center;
-  width: 90%;
+  padding-bottom: 10px;
+  margin-top: 100px;
 }
 
-.footerLinks{
+footer h2{
   padding-bottom: 20px;
-  font-weight: 600;  
-  display: flex;
-  justify-content:space-evenly;
-  vertical-align:auto;
+}
+
+footer .text-center{
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footerImage{
@@ -193,6 +245,12 @@ footer{
   align-items: start;
 }
 
+.footerLinks{
+  font-weight: 600;  
+  display: flex;
+  justify-content:space-evenly;
+  vertical-align:auto;
+}
 
 /* Typography CSS */
 h1{
@@ -351,7 +409,7 @@ h2{
 #canadaPost{
   grid-area:canadaPost;
   margin-left: 5px;
-  max-width: 100%
+  max-width: 100%;
   padding-top: 10px;
 }
 
@@ -422,12 +480,10 @@ h2{
   left: 45%;
   text-align: center;
 }
-}
 
 /* Mobile Footer */
 footer{
   margin-top: 200px;
-  background-color: #17af95;
   color: white;
   text-align: center;
   width: 100%;
@@ -446,3 +502,7 @@ footer{
   position: relative;
   align-items: start;
 }
+
+}
+
+
